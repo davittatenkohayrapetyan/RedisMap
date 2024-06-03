@@ -3,9 +3,6 @@ version: '3.8'
 services:
   redis:
     image: redis:latest
-    container_name: redis-server
+    container_name: redis-test
     ports:
       - "6379:6379"
-    environment:
-      - REDIS_MAXMEMORY=256mb
-    command: ["redis-server", "--maxmemory-policy", "allkeys-lru"]
